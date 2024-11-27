@@ -12,6 +12,7 @@ fi
 if [ ! -e "${EMARK_CONF}" ]; then
   tee -a >${EMARK_CONF} <<EOF
 server=1
+listen=1
 rpcuser=${EMARK_RPCUSER:-emarkrpc}
 rpcpassword=${EMARK_RPCPASSWORD}
 EOF
