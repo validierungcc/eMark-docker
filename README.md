@@ -5,10 +5,9 @@ https://github.com/validierungcc/eMark-docker
 https://deutsche-emark.org/
 
 
-minimal example docker-compose.yml
+minimal example compose.yml
 
      ---
-    version: '3.9'
     services:
         emark:
             container_name: emark
