@@ -1,4 +1,4 @@
-FROM alpine:3.19 as builder
+FROM alpine:3.20 AS builder
 
 RUN apk add --no-cache git make g++ boost-dev openssl-dev db-dev miniupnpc-dev zlib-dev
 RUN addgroup --gid 1000 emark
@@ -12,7 +12,7 @@ RUN git checkout tags/2.1.0
 WORKDIR /emark/eMark/src
 RUN make -f makefile.unix
 
-FROM alpine:3.19
+FROM alpine:3.20
 
 RUN apk add --no-cache boost-dev db-dev miniupnpc-dev zlib-dev bash curl
 RUN addgroup --gid 1000 emark
